@@ -1,0 +1,326 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+
+/* NAVBAR */
+.navbar {
+  background-color: rgb(111, 102, 102);
+  color: black;
+ padding-block: 1rem;
+ 
+
+
+  .container,
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+
+}
+.nav-links {
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: rgb(9, 9, 9);
+  text-decoration: none;
+
+  &:hover {
+    color: rgb(255, 255, 255);
+  }
+}
+
+.nav-link.active {
+  color: black;
+}
+
+
+/* HOME */
+
+.home-title{
+  font-family: 'Times New Roman', Times, serif;
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+  color: black;
+  
+}
+
+.shop {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.product {
+  border: 1px solid #0a0808;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+  text-decoration: none;
+  color: #670e0e;
+
+  &:hover {
+    border-color: #363738;
+    transform: scale(1.1);
+    box-shadow: 5px 2px 10px 0px rgba(84, 83, 83, 0.75);
+    
+  }
+}
+
+.image-container {
+  width: 100%;
+  max-height: 200px;
+  margin-bottom: 1rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+/* PRODUCT DETAILS */
+.details {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 1rem;
+  margin: 1rem 0 ;
+  align-items: normal;
+  text-align: center;
+  border: 7px solid #000000;
+}
+
+.image-containerdetails,
+.small-image-containerdetails {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.small-image-containerdetails img {
+  width: calc(70% - 25px); 
+  max-width: 200px;
+  margin: 10px;
+  object-fit: fill;
+  transition: transform 0.7s ease; 
+}
+
+.product-name{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.product-price{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2rem;
+  padding: 2px;
+  margin: 1rem;
+}
+
+.buy-btn{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  padding: 1rem;
+  background-color: #515556; 
+  margin: 1rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+ 
+  &:hover {
+    background-color: rgba(5, 4, 4, 0.95);
+    
+  }
+}
+
+
+.product-description{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 1rem;
+}
+
+.small-image-containerdetails img:hover {
+  transform: scale(1.8);
+}
+
+@media screen and (max-width: 768px) {
+  .small-image-containerdetails img {
+    width: 100%;
+    max-width: 100px;
+  }
+}
+
+
+
+/* CART */
+.cart-title{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 3px solid #020202;
+  margin-top: 2rem;
+}
+
+.item-details {
+  display: flex;
+  align-items: center;
+.item-image {
+  width: 100px;
+}
+}
+
+.item-name {
+  font-weight: bold;
+}
+
+.item-actions {
+  display: block;
+  gap: 10px;
+}
+
+.item-buttons .item-button {
+  background-color: rgb(132, 148, 148);
+  color: #000000;
+  padding: 5px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: rgb(198, 191, 191);
+  }
+}
+
+.delete-button {
+  padding: 5px;
+  color: rgb(97, 65, 65);
+  &:hover {
+    background-color: red;
+  }
+}
+
+.cart-container {
+  background-color: rgb(241, 234, 234);
+  padding: 20px;
+}
+
+.cart-items {
+  margin-bottom: 20px;
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 20px;
+}
+
+.divider {
+  border-color: rgb(0, 2, 5);
+}
+
+.total-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-price {
+  font-weight: lighter;
+}
+
+.checkout-buttons {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+.clear-cart-button,
+.place-order-button,
+.checkout-link {
+  padding: 10px 20px;
+  border-radius: 23px;
+  text-decoration: none;
+  color: rgb(181, 176, 176);
+}
+
+.place-order-button,
+.checkout-link {
+  background-color: rgb(0, 0, 0);
+}
+
+
+.place-order-button:hover,
+.checkout-link:hover {
+  background-color: rgb(73, 64, 64);
+}
+
+ /* KONTAKTA OSS */
+ .form-title{
+  color: black;
+  margin-left: 85px;
+
+ }
+  .form{
+    border: 6px solid rgb(0, 0, 0);
+    padding: 1.5rem;
+    margin: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+  
+  .name{
+    padding: 7px;
+    margin: 5px;
+  }
+  
+  .email{
+    padding: 4px;
+    margin: 3px;
+  }
+  
+  .message{
+    padding: 9px;
+    margin: 2px;
+  }
+  
+  .send-btn{
+    padding: 8px;
+    margin: 2px;
+    background-color: #716e6e; 
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: rgba(4, 4, 4, 0.95);
+      
+      color: rgb(207, 213, 213);
+    }
+  }
